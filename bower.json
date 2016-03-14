@@ -1,0 +1,26 @@
+{
+  "name": "starter_theme",
+  "description": "WordPress Starter Theme",
+  "main": "index.php",
+  "authors": [
+    "Nick Harberg"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "WordPress"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "^2.2.1",
+    "font-awesome": "^4.5.0",
+    "reading-time": "^1.0.0"
+  }
+}

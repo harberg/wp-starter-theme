@@ -1,0 +1,39 @@
+{
+  "name": "starter_theme",
+  "version": "1.0.0",
+  "description": "WordPress Starter Theme",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harberg/wp-starter-theme.git"
+  },
+  "keywords": [
+    "WordPress"
+  ],
+  "author": "Nick Harberg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harberg/wp-starter-theme/issues"
+  },
+  "homepage": "https://github.com/harberg/wp-starter-theme",
+  "devDependencies": {
+    "globule": "^0.2.0",
+    "grunt": "^0.4.5",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.1.0",
+    "matchdep": "^1.0.1",
+    "node-bourbon": "^4.2.3",
+    "node-neat": "^1.7.2",
+    "node-sass": "^3.4.2"
+  },
+  "dependencies": {
+    "bower": "^1.7.7"
+  }
+}
