@@ -1,6 +1,6 @@
 {
-  "name": "starter_theme",
-  "version": "1.0.0",
+  "name": "hardcopy_starter_theme",
+  "version": "0.0.1",
   "description": "WordPress Starter Theme",
   "main": "index.php",
   "scripts": {
