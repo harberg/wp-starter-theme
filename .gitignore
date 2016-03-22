@@ -1,3 +1,6 @@
+# OSX gitignore
+# https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+
 *.log
 .htaccess
 sitemap.xml
@@ -14,3 +17,19 @@ wp-content/wp-cache-config.php
 
 node_modules/
 bower_components/
+.sass-cache
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
