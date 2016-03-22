@@ -86,14 +86,6 @@ function hc_hook_after_setup() {
     add_theme_support( 'title-tag' );
 
     /**
-     * Turn on Featured Image for specific post types
-     *
-     * @see https://codex.wordpress.org/Post_Thumbnails
-     */
-
-    add_theme_support( 'post-thumbnails' );
-
-    /**
      * Enable support for the logo/header upload in the Theme Customizer
      *
      * @see : https://codex.wordpress.org/Custom_Headers
