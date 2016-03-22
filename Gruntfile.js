@@ -21,24 +21,41 @@ module.exports = function(grunt) {
         },
 
         //------------------------------------------------
+        // Copy Tasks
+        //------------------------------------------------
+
+        copy : {
+            main : {
+                files : [
+                    {
+                        expand : true,
+                        cwd : '<%= bowerPath %>/html5shiv/dist/',
+                        dest : '<%= libPath %>',
+                        src : 'html5shiv.min.js',
+                    }
+                ],
+            },
+        },
+
+        //------------------------------------------------
         // Bower Concatination Tasks
         //------------------------------------------------
 
         bower_concat : {
-            all : {
-                options : {
+            all: {
+                options: {
                     separator : ';\n',
                 },
-                dest : 'js/bower.js',
+                dest: 'js/bower.js',
                 cssDest : 'css/bower.css',
-                dependencies : {
-                    'Slidebars' : 'jquery'
+                dependencies: {
+                    'Slidebars' : 'jquery',
                 },
-                mainFiles : {
-                    'jQuery' : ['dist/jquery.js'],
-                    'Slidebars' : ['dist/slidebars.js', 'dist/slidebars.css'],
+                mainFiles: {
+                    'jquery' : ['dist/jquery.js'],
+                    'Slidebars' : ['dist/slidebars.js'],
                 },
-                exclude : [ 'font-awesome' ],
+                exclude: [ 'font-awesome', 'reading-time' ],
             },
         },
 
@@ -98,7 +115,8 @@ module.exports = function(grunt) {
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('default', ['serve']);
     grunt.registerTask('build', ['sass']);
-    grunt.registerTask('bower', ['bower_concat']);
+    grunt.registerTask('myCopy', ['copy:main']);
+    grunt.registerTask('bowerBuild', ['bower_concat']);
 }
 
 

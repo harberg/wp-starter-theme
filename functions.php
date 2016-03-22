@@ -186,6 +186,15 @@ function hc_hook_after_setup() {
          */
     }
 
+    /**
+     * Add translation capability for theme
+     * Translations should be put into /languages/ directory.
+     *
+     * @see https://codex.wordpress.org/Function_Reference/load_theme_textdomain
+     */
+
+    load_theme_textdomain( 'hardcopy_starter_theme', get_template_directory() . '/languages' );
+
     /*
      * Update the stroed version if different from the current one
      */

@@ -22,5 +22,8 @@
     "jQuery": "^2.2.1",
     "font-awesome": "^4.5.0",
     "reading-time": "^1.0.0"
+  },
+  "devDependencies": {
+    "html5shiv": "^3.7.3"
   }
 }
