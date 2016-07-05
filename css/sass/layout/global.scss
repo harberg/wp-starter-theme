@@ -1,0 +1,47 @@
+.embedHolder {
+    @include margin(null auto);
+    max-width : em(720);
+}
+.embedContainer {
+    @include hc-embed-container();
+}
+
+#map_canvas {
+    height : 400px;
+}
+img[src$=".gif"] {
+    width : initial;
+}
+
+.cf {
+    @include clearfix();
+}
+
+.caps {
+    text-transform: uppercase;
+}
+.blockDisplay {
+    display: block;
+}
+
+.alert, .message, .success {
+    @include padding(1em 2em);
+    @include margin(2em 0);
+    font-family : $sans-serif;
+    font-weight : 600;
+    font-size   : .925em;
+}
+.alert {
+    color            : $alert;
+    background-color : rgba($alert, .10);
+}
+.message {
+    color            : $message;
+    background-color : rgba($message, .10);
+}
+.success {
+    color            : $success;
+    background-color : rgba($success, .10);
+}
+
+

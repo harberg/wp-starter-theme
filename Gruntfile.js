@@ -2,7 +2,7 @@
 
 module.exports = function(grunt) {
 
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    require('matchdep').filter('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.initConfig({
         pkd       : grunt.file.readJSON('package.json'),
@@ -21,41 +21,25 @@ module.exports = function(grunt) {
         },
 
         //------------------------------------------------
-        // Copy Tasks
-        //------------------------------------------------
-
-        copy : {
-            main : {
-                files : [
-                    {
-                        expand : true,
-                        cwd : '<%= bowerPath %>/html5shiv/dist/',
-                        dest : '<%= libPath %>',
-                        src : 'html5shiv.min.js',
-                    }
-                ],
-            },
-        },
-
-        //------------------------------------------------
         // Bower Concatination Tasks
         //------------------------------------------------
 
-        bower_concat : {
+        bower_concat: {
             all: {
                 options: {
                     separator : ';\n',
                 },
-                dest: 'js/bower.js',
-                cssDest : 'css/bower.css',
+                dest: {
+                    'js' : 'js/bower.js',
+                    'css' : 'css/bower.css',
+                },
                 dependencies: {
                     'Slidebars' : 'jquery',
                 },
                 mainFiles: {
-                    'jquery' : ['dist/jquery.js'],
-                    'Slidebars' : ['dist/slidebars.js'],
+                    'Slidebars' : ['dist/slidebars.js', 'dist/slidebars.css'],
                 },
-                exclude: [ 'font-awesome', 'reading-time' ],
+                exclude: [ 'font-awesome' ],
             },
         },
 
@@ -79,7 +63,7 @@ module.exports = function(grunt) {
         // Watch Tasks
         //------------------------------------------------
 
-        watch : {
+        watch: {
             scripts : {
                 files : ["js/script.js"],
                 tasks : ["serve"],
@@ -116,7 +100,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['serve']);
     grunt.registerTask('build', ['sass']);
     grunt.registerTask('myCopy', ['copy:main']);
-    grunt.registerTask('bowerBuild', ['bower_concat']);
-}
+    grunt.registerTask('bowerBuild', [ 'bower_concat' ]);
+};
 
 

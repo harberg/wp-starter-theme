@@ -19,11 +19,8 @@
     "tests"
   ],
   "dependencies": {
-    "jQuery": "^2.2.1",
-    "font-awesome": "^4.5.0",
-    "reading-time": "^1.0.0"
-  },
-  "devDependencies": {
-    "html5shiv": "^3.7.3"
+    "jQuery": "~2.2.0",
+    "font-awesome": "fontawesome#~4.5.0",
+    "Slidebars": "~0.10.3"
   }
 }

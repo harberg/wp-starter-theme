@@ -1,6 +1,15 @@
 // Typography
-$base-font-family: $helvetica;
-$heading-font-family: $base-font-family;
+$serif-font-family      : serif;
+$sans-serif-font-family : 'Source Sans Pro', sans-serif;
+
+$sans-serif             : $sans-serif-font-family;
+$sans-serif-font        : $sans-serif-font-family;
+
+$serif                  : $serif-font-family;
+$serif-font             : $serif-font-family;
+$base-font-family       : $serif;
+$heading-font-family    : $sans-serif-font;
+$icon-font-family       : "FontAwesome";
 
 // Font Sizes
 $base-font-size: 1em;
@@ -16,10 +25,20 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
+$white : rgba(255, 255, 255, 1.0);
+$black : rgba(0, 0, 0, 1.0);
 $blue: #477dca;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$green      : rgba(38, 166, 91,1.0);
+$yellow     : rgba(247, 202, 24,1.0);
+$blue       : rgba(52, 152, 219,1.0);
+$red        : rgba(193, 39, 45, 1.0);
+$orange     : rgba(217, 145, 78, 1.0);
+$pink       : rgba(226, 80, 154, 1.0);
+$tan        : rgba(241, 232, 216, 1.0);
+
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -32,6 +51,11 @@ $base-border: 1px solid $base-border-color;
 // Background Colors
 $base-background-color: #fff;
 $secondary-background-color: tint($base-border-color, 75%);
+
+// Flash Colors
+$alert   : $red;
+$message : $yellow;
+$success : $green;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);

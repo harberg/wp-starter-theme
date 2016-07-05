@@ -60,7 +60,7 @@ function hc_scripts_wp_enqueue_scripts() {
     wp_enqueue_script(
         'hc-main-script',
         get_template_directory_uri() . '/js/script.js',
-        array( 'bower.js' ),
+        array(),
         HARDCOPY_STARTER_THEME_VERSION,
         TRUE
     );

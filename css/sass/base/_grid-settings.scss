@@ -7,8 +7,15 @@
 // $max-width: 1200px;
 
 // Neat Breakpoints
-$medium-screen: 600px;
-$large-screen: 900px;
+$medium-screen: 601px;
+$large-screen: 1025px;
 
 $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
 $large-screen-up: new-breakpoint(min-width $large-screen 8);
+
+$small-mobile : new-breakpoint(max-width 320px 4);
+$mobile       : new-breakpoint(min-width 320px 4);
+$tablet       : new-breakpoint(min-width 600px 12);
+$tablet-big   : new-breakpoint(min-width 750px 12);
+$desktop      : new-breakpoint(min-width 1025px 12);
+$fullscreen   : new-breakpoint(min-width 1500px 12);

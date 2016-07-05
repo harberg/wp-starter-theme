@@ -9,11 +9,17 @@
  *
  */
 ?>
-</main>
-<footer>
+        <footer>
 
-</footer>
-
+        </footer>
+    </div> <!-- end #wrapper -->
+</div> <!-- end #sb-site -->
+<nav id="mobile-mainNav" class="sb-slidebar sb-right sb-style-overlay">
+    <?php wp_nav_menu( array(
+        'menu'      => 'Main Nav',
+        'container' => false,
+    )); ?>
+</nav>
 <?php wp_footer(); ?>
 <!-- comment out when not using Grunt Watch -->
         <script>
@@ -25,5 +31,5 @@
             }
         </script>
         <!-- <script src="//localhost:35729/livereload.js"></script> -->
-</body>
+    </body>
 </html>

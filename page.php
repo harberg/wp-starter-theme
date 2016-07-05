@@ -5,17 +5,20 @@
  * This is a WP default
  *
  * @package WordPress
- * @subpackage Starter_Theme
+ * @subpackage Hardcopy_Starter_Theme
  *
  */
 get_header(); ?>
+<div class="content-area">
+    <main id="main" class="site-main">
+        <?php
+            while( have_posts() ) : the_post() ;
 
-<?php
-    while( have_posts() ) : the_post() ;
+                get_template_part( 'templates/content', 'page' );
 
-        get_template_part( 'templates/content', 'page' );
-
-    endwhile;
-?>
+            endwhile;
+        ?>
+    </main> <!-- end .site-main -->
+</div> <!-- end .content-area -->
 
 <?php get_footer(); ?>

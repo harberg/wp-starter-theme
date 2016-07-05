@@ -1,0 +1,31 @@
+#sb-site {
+
+}
+#wrapper {}
+header {
+
+    h1 {
+        @include hc-visually-hidden();
+    }
+    .headerLogo {
+        display : inline-block;
+        img {
+            width      : 100px;
+            margin-left : -1em;
+        }
+    }
+    .fa-reorder {
+        margin-top : 8px;
+        font-size  : 36px;
+        color      : $blue;
+        float      : right;
+    }
+    @include media($tablet) {
+
+    }// end media($tablet)
+    @include media($desktop) {
+        .fa-reorder {
+            display: none;
+        }
+    }// end media($desktop)
+}// end header

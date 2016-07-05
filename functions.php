@@ -161,6 +161,13 @@ function hc_hook_after_setup() {
     );
 
     /**
+     * Enable custom menus
+     */
+
+    add_theme_support( 'menus' );
+
+
+    /**
      * Remove the meta tag indication the generator of the page.
      * Done for security in case WordPress site is behind in updates
      */

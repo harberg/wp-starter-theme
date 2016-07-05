@@ -30,6 +30,13 @@ function hc_styles_wp_enqueue_scripts() {
         HARDCOPY_STARTER_THEME_VERSION
     );
 
+    wp_enqueue_style(
+        'hc-bower-style',
+        get_template_directory_uri() . '/css/bower.css',
+        FALSE,
+        HARDCOPY_STARTER_THEME_VERSION
+    );
+
     $theme_mods = get_option( 'theme_mods_hardcopy-starter-theme', array() );
 
     if( !empty( $theme_mods['user_styles'] ) ) {

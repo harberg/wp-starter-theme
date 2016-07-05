@@ -4,3 +4,28 @@
 @import "base/grid-settings";
 @import "neat";
 @import "base/base";
+@import "mixins/hc-mixins";
+
+//-------------- Stylesheets for JS plugins ---------------//
+
+
+//-------------- Layout -----------------------------------//
+@import "layout/default-wordpress";
+@import "layout/scaffolding";
+@import "layout/global";
+
+//-------------- Partials ---------------------------------//
+@import "partials/footer";
+@import "partials/header";
+@import "partials/navigation";
+
+//-------------- Templates --------------------------------//
+@import "templates/homepage";
+@import "templates/404";
+@import "templates/contact";
+@import "templates/index";
+@import "templates/single";
+@import "templates/generic-content";
+
+//-------------- Font Awesome -----------------------------//
+@import "../font/scss/font-awesome";

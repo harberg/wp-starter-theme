@@ -28,10 +28,24 @@
 <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<header id="header" class="">
 
-</header><!-- /header -->
-
-<main id="#main" role="main">
-
+<div id="sb-site">
+    <div id="wrapper">
+        <header class="">
+            <div class="innerContainer">
+                <h1 class="siteTitle"><a href="<?php bloginfo( 'url' ); ?>" rel="home">Title</a></h1>
+                <a class="headerLogo" href="<?php bloginfo( 'url' ); ?>">
+                    <img src="<?php
+                                echo get_header_image() ?
+                                esc_url( get_header_image() ) :
+                                esc_url( sms_theme_img( 'seamonster-studios-logo-image.svg' ) ); ?>"
+                </a>
+                <a id="menuNavLeft" class="sb-toggle-right open-menu fa fa-reorder" href="javascript: void(0)"></a>
+                <?php wp_nav_menu( array(
+                    'theme_location'  => 'primary',
+                    'container'       => 'nav',
+                    'container_class' => 'mainNav',
+                )); ?>
+            </div>
+        </header><!-- /header -->
 
