@@ -247,6 +247,24 @@ function hc_hook_init() {
 
 add_action( 'init', 'hc_hook_init', 100 );
 
+/**
+ * Register sidebars and widgetized areas
+ *
+ */
+
+function hc_widget_sidebar_init() {
+    register_sidebar( array(
+        'name' => __( 'Widget Sidebar' ),
+        'id' => 'widget_sidebar',
+        'description' => __( 'Add widgets to appear in your main sidebar' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+}
+
+add_action( 'widgets_init', 'hc_widget_sidebar_init' );
 
 /*-----------------------------------------------------------------------------------*/
 /*  HC Load Scripts
